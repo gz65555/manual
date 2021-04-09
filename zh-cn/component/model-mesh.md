@@ -11,7 +11,7 @@ const entity = rootEntity.createChild('mesh-example');
 const meshRenderer = entity.addComponent(MeshRenderer);
 
 const modelMesh = new ModelMesh(engine);
-modelMesh.addSubMesh(0, 2);
+modelMesh.addSubMesh(0, 6);
 
 // 设置顶点数据
 const positions = modelMesh.getPositions();
@@ -39,7 +39,7 @@ modelMesh.setColors(
 modelMesh.uploadData(false);
 
 meshRenderer.mesh = modelMesh;
-meshRenderer.setMaterial(new UnlitMaterial());
+meshRenderer.setMaterial(new UnlitMaterial(engine));
 ```
 
 ## 详细介绍
